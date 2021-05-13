@@ -1,7 +1,7 @@
 #!/bin/bash -x
 
-month=1
-date=1
+month=$((RANDOM%1))
+date=$((RANDOM%1))
 
 if [[ $month -ge 3 && $month -le 6 ]]
 
