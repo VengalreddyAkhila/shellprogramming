@@ -1,18 +1,18 @@
 #!/bin/bash -x
 
-YYYY=0
-echo -n "enter year(YYYY) : "
-read YY
-if [ $((YY % 400 -eq 0)) ]
+echo  "enter year(YYYY) : "
+read year
+if [ $((year % 4)) -eq 0 ]
+then
+    echo "leap year" 
+elif [ $((year % 100)) -eq 0 ]
+then
+ echo "not leap year"
+elif [ $((year % 400)) -eq 0 ]
 then
    echo "leap year"
-elif [ $((YY % 100 -eq 0)) ]
-then
-    echo  "not leap year"
-elif [ $((YY % 4 -eq 0))  && $((YY % 100 -ne 0)) ]
-then
-   echo "$YY leap year"
 else
-     echo "$YY not leap year"
+     echo " not leap year"
 fi 
+
      

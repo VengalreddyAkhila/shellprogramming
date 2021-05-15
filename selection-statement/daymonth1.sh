@@ -1,8 +1,8 @@
 #!/bin/bash -x
 
-month=$((RANDOM%1))
-date=$((RANDOM%1))
 
+read -p " enter date: " date
+read -p " enter month: " month
 if [[ $month -ge 3 && $month -le 6 ]]
 
 then
@@ -25,8 +25,9 @@ then
                 fi 
                   if [[ $date -lt 20 && $date -ge 1 ]]
                   then 
-                    echo False
+                    echo false
                fi
+                  echo false
               fi
 
 fi
